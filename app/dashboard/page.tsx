@@ -151,11 +151,11 @@ export default function DashboardPage() {
 
   // Get unique categories and difficulties for filter options
   const categories = Array.from(
-    new Set(allRecipes.map((r) => r.category).filter(Boolean))
+    new Set(allRecipes.map((r) => r.category).filter((c): c is string => c != null))
   ).sort();
 
   const difficulties = Array.from(
-    new Set(allRecipes.map((r) => r.difficulty).filter(Boolean))
+    new Set(allRecipes.map((r) => r.difficulty).filter((d): d is string => d != null))
   ).sort();
 
   function clearFilters() {
