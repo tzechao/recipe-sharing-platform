@@ -9,6 +9,7 @@ import { RecipeCardSkeleton } from "@/components/RecipeCardSkeleton";
 type Recipe = {
   id: string;
   title: string;
+  description?: string | null;
   ingredients: string;
   instructions: string;
   cooking_time: number | null;
